@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Grid_layout.MainPage">
+
+    <ScrollView>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0"
+                   Source="image4.png"
+                   Aspect="AspectFill" />
+
+            <VerticalStackLayout Grid.Row="1" Spacing="0">
+
+                <Border StrokeShape="RoundRectangle 24"
+                        StrokeThickness="0"
+                        Margin="20,-40,20,0"
+                        Background="#FFF4E0">
+
+                    <Grid Padding="16"
+                          ColumnDefinitions="Auto,*,Auto"
+                          RowDefinitions="Auto,Auto,Auto"
+                          ColumnSpacing="8"
+                          RowSpacing="4">
+
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Robin Hood" FontSize="28" FontAttributes="Bold"/>
+                        <Image Grid.Row="0" Grid.Column="2"  Source="symbolmale.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Center"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Text="Pug" FontSize="20" TextColor="#4B5563"/>
+
+                        <HorizontalStackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="End" Spacing="5" VerticalOptions="Center">
+                            <Image Source="clock.png" HeightRequest="16" WidthRequest="16"/>
+                            <Label Text="1 years old" FontSize="18" TextColor="#4B5563"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Spacing="8" VerticalOptions="Center" Margin="0,5,0,0">
+                            <Image Source="location.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="Start"/>
+                            <Label Text="2B, Lorong Deshon Timur 17A4"
+                                   FontSize="16"  TextColor="#6B7280" 
+                                   VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                </Border>
+
+                <VerticalStackLayout Padding="20" Spacing="15" Margin="0,10,0,20" BackgroundColor="White">
+
+                    <Grid ColumnDefinitions="Auto, *, Auto"
+                          ColumnSpacing="10"
+                          VerticalOptions="Center">
+
+                        <Image Grid.Column="0"
+                               Source="owner1.jpg" HeightRequest="50"
+                               WidthRequest="50"
+                               Aspect="AspectFill">
+                            <Image.Clip>
+                                <EllipseGeometry Center="25,25" RadiusX="25" RadiusY="25" />
+                            </Image.Clip>
+                        </Image>
+
+                        <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Spacing="2">
+                            <Label Text="Jeon Jungkook"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   TextColor="Black" />
+                            <Label Text="Owner"
+                                   FontSize="14"
+                                   TextColor="Gray" />
+                        </VerticalStackLayout>
+
+                        <Label Grid.Column="2"
+                               Text="1/1/2024"
+                               FontSize="12"
+                               TextColor="Gray"
+                               VerticalOptions="Start" />
+                    </Grid>
+
+                    <Label Text="Hi! Robin the Pug is simply a tiny tornado of fun, wrinkles, and endless charm."
+                           FontSize="14"
+                           TextColor="#4B5563"
+                           LineHeight="1.2" />
+
+                    <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15" Margin="0,10,0,0">
+
+                        <Button Grid.Column="0"
+                                Text="♡"
+                                FontSize="24"
+                                BackgroundColor="#F3F4F6"
+                                TextColor="#EF4444"
+                                CornerRadius="15"
+                                HeightRequest="55"
+                                WidthRequest="55" 
+                                BorderWidth="0" />
+
+                        <Button Grid.Column="1"
+                                Text="Adoption"
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                BackgroundColor="#FDBF60" TextColor="Black"
+                                CornerRadius="15"
+                                HeightRequest="55"
+                                BorderWidth="0" />
+                    </Grid>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
